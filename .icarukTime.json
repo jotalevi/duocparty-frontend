@@ -1,0 +1,26 @@
+{
+    "idleHeartbeats": 3571,
+    "navigatingHeartbeats": 409,
+    "totalCodingHeartbeats": 10997,
+    "languageHeartbeats": {
+        "jsonc": 276,
+        "javascript": 4207,
+        "css": 6484,
+        "json": 30
+    },
+    "fileHeartbeats": {
+        "/Users/neto/Library/Application Support/Code/User/settings.json": 276,
+        "src/App.js": 419,
+        "src/pages/enter/index.js": 898,
+        "src/App.css": 875,
+        "src/pages/enter/index.css": 445,
+        "src/index.js": 236,
+        "src/index.css": 4596,
+        "src/pages/home/index.js": 99,
+        "src/pages/list/index.js": 1723,
+        "src/components/tile/index.css": 568,
+        "src/components/tile/index.js": 569,
+        "src/pages/create/index.js": 263,
+        "package.json": 30
+    }
+}
