@@ -1,11 +1,11 @@
 {
-    "idleHeartbeats": 8084,
+    "idleHeartbeats": 8128,
     "navigatingHeartbeats": 1103,
-    "totalCodingHeartbeats": 22491,
+    "totalCodingHeartbeats": 22550,
     "languageHeartbeats": {
         "jsonc": 528,
         "javascript": 12105,
-        "css": 8130,
+        "css": 8189,
         "json": 1596,
         "ignore": 6,
         "typescriptreact": 126
@@ -17,7 +17,7 @@
         "src/App.css": 875,
         "src/pages/enter/index.css": 445,
         "src/index.js": 281,
-        "src/index.css": 6242,
+        "src/index.css": 6301,
         "src/pages/home/index.js": 99,
         "src/pages/list/index.js": 8644,
         "src/components/tile/index.css": 568,
