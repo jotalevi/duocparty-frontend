@@ -1,26 +1,9 @@
 import Tile from "../tile";
 
-function TileList() {
+function TileList(props) {
   let tiles = [];
 
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
-  tiles.push(<Tile></Tile>);
+  for (const carrete of props.carretes) tiles.push(<Tile></Tile>);
 
   return <div className="list-div">{tiles}</div>;
 }

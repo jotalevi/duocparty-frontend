@@ -1,9 +1,21 @@
-//import { Link } from "react-router-dom";
 import moment from "moment";
 import TileList from "../../components/tileList";
 import React, { useState, useEffect } from "react";
+import useMergeState from "../../utils/mergeState";
+import MonthPicker from "../../components/monthPicker";
+import YearPicker from "../../components/yearPicker";
 
 function ListPage() {
+  const [year, setYear] = useMergeState({
+    selectedYear: moment().format("YYYY"),
+    showPicker: false,
+  });
+
+  const [month, setMonth] = useMergeState({
+    selectedMonth: moment().format("MM"),
+    showPicker: false,
+  });
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -18,22 +30,58 @@ function ListPage() {
     };
   }, []);
 
-  moment.locale("es-cl");
-
-  let carretes = ["", "", "", "", "", ""];
+  let carretes = ["", "", "", "", "", "", "", "", ""];
+  carretes = [];
 
   if (carretes.length === 0) {
     return (
       <div className="main-div">
         <h1>
           No encontramos ningun <span className="white-out"> carrete </span>
-          entre el
-          <span className="white-out">
-            {" " + moment().format("DD/MM/YYYY")}
-          </span>{" "}
-          y el
-          <span className="white-out">
-            {" " + moment().add(3, "months").format("DD/MM/YYYY")}
+          en
+          <span
+            className="white-out"
+            onClick={() => {
+              if (!month.showPicker)
+                setMonth({
+                  selectedMonth: month.selectedMonth,
+                  showPicker: true,
+                });
+            }}
+          >
+            <MonthPicker
+              month={month}
+              setMonth={(data) => {
+                setMonth(data);
+              }}
+              selectedYear={year.selectedYear}
+            />
+            {" " +
+              moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
+                "MMM"
+              )}
+          </span>
+          <span
+            className="white-out"
+            onClick={() => {
+              if (!year.showPicker)
+                setYear({
+                  selectedYear: year.selectedYear,
+                  showPicker: true,
+                });
+            }}
+          >
+            <YearPicker
+              year={year}
+              setYear={(data) => {
+                setYear(data);
+              }}
+              selectedMonth={month.selectedMonth}
+            />
+            {" " +
+              moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
+                "YYYY"
+              )}
           </span>
         </h1>
       </div>
@@ -52,17 +100,54 @@ function ListPage() {
             {" "}
             {carretes.length === 1 ? "carrete" : "carretes"}{" "}
           </span>
-          entre el
-          <span className="white-out">
-            {" " + moment().format("DD/MM/YYYY")}
-          </span>{" "}
-          y el
-          <span className="white-out">
-            {" " + moment().add(3, "months").format("DD/MM/YYYY")}
+          en
+          <span
+            className="white-out"
+            onClick={() => {
+              if (!month.showPicker)
+                setMonth({
+                  selectedMonth: month.selectedMonth,
+                  showPicker: true,
+                });
+            }}
+          >
+            <MonthPicker
+              month={month}
+              setMonth={(data) => {
+                setMonth(data);
+              }}
+              selectedYear={year.selectedYear}
+            />
+            {" " +
+              moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
+                "MMM"
+              )}
+          </span>
+          <span
+            className="white-out"
+            onClick={() => {
+              if (!year.showPicker)
+                setYear({
+                  selectedYear: year.selectedYear,
+                  showPicker: true,
+                });
+            }}
+          >
+            <YearPicker
+              year={year}
+              setYear={(data) => {
+                setYear(data);
+              }}
+              selectedMonth={month.selectedMonth}
+            />
+            {" " +
+              moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
+                "YYYY"
+              )}
           </span>
         </h1>
       </div>
-      <TileList></TileList>
+      <TileList carretes={carretes} />
     </div>
   );
 }
