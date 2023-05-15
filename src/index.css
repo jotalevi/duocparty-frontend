@@ -105,13 +105,13 @@
   .white-out {
     transition: all;
     transition-duration: 250ms;
-    color: rgb(196, 196, 196);
+    color: white;
   }
   
   .white-out:hover {
     transition: all;
     transition-duration: 250ms;
-    color: white;
+    color: rgb(179, 179, 179);
   }
   
   .green-button-div {
@@ -485,13 +485,13 @@
   .white-out {
     transition: all;
     transition-duration: 250ms;
-    color: rgb(196, 196, 196);
+    color: white;
   }
   
   .white-out:hover {
     transition: all;
     transition-duration: 250ms;
-    color: white;
+    color: rgb(179, 179, 179);
   }
   
   .green-button-div {
