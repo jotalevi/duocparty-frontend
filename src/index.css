@@ -97,7 +97,7 @@
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 10%;
   }
@@ -194,6 +194,9 @@
   
   a {
     all: unset;
+  }
+  
+  .tile {
     transition: all;
     transition-duration: 250ms;
     min-height: 320px !important;
@@ -342,6 +345,35 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+  }
+
+  .month-selector-li {
+    color: white;
+  }
+  
+  .month-selector-ul {
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 0;
+  }
+  
+  .month-selector-dropdow-hide{
+    transition: all;
+    transition-duration: 250ms;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+  }
+
+  .month-selector-dropdow-show{
+    transition: all;
+    transition-duration: 250ms;
+    height: 200px;
+    overflow: scroll;
+    display: inherit;
+    position: absolute;
+    margin-top: 48px;
+    text-align: left;
   }
 
 }
@@ -543,6 +575,7 @@
   a {
     all: unset;
   }
+
   .tile {
     transition: all;
     transition-duration: 250ms;
@@ -730,38 +763,36 @@
     transition-duration: 250ms;
     opacity: 0 !important;
   }
-}
 
-.month-selector-li {
-  color: white;
+  .month-selector-li {
+    color: white;
+  }
+  
+  .month-selector-ul {
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 0;
+  }
+  
+  .month-selector-dropdow-hide{
+    transition: all;
+    transition-duration: 250ms;
+    height: 0px;
+    overflow: hidden;
+    display: none;
+  }
+  .month-selector-dropdow-show{
+    transition: all;
+    transition-duration: 250ms;
+    height: 200px;
+    overflow: scroll;
+    display: inherit;
+    position: absolute;
+    margin-top: 68px;
+    text-align: left;
+    padding-left: 13px;
+  }
 }
-
-.month-selector-ul {
-  list-style-type: none;
-  padding: 0px;
-  margin-top: 0;
-}
-
-.month-selector-dropdow-hide{
-  transition: all;
-  transition-duration: 250ms;
-  height: 0px;
-  overflow: hidden;
-  display: none;
-}
-
-.month-selector-dropdow-show{
-  transition: all;
-  transition-duration: 250ms;
-  height: 200px;
-  overflow: scroll;
-  display: inherit;
-  position: absolute;
-  margin-top: 68px;
-  text-align: left;
-  padding-left: 13px;
-}
-
 .month-selector-main-div{
   
 }

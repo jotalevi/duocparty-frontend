@@ -38,7 +38,7 @@ function ListPage() {
       <div className="main-div">
         <h1>
           No encontramos ningun <span className="white-out"> carrete </span>
-          en
+          en <br />
           <span
             className="white-out"
             onClick={() => {
@@ -56,11 +56,10 @@ function ListPage() {
               }}
               selectedYear={year.selectedYear}
             />
-            {" " +
-              moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
-                "MMM"
-              )}
-          </span>
+            {moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
+              "MMM"
+            )}
+          </span>{" "}
           <span
             className="white-out"
             onClick={() => {
@@ -100,7 +99,7 @@ function ListPage() {
             {" "}
             {carretes.length === 1 ? "carrete" : "carretes"}{" "}
           </span>
-          en
+          en <br />
           <span
             className="white-out"
             onClick={() => {
@@ -118,11 +117,10 @@ function ListPage() {
               }}
               selectedYear={year.selectedYear}
             />
-            {" " +
-              moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
-                "MMM"
-              )}
-          </span>
+            {moment(`${month.selectedMonth}/01/${year.selectedYear}`).format(
+              "MMM"
+            )}
+          </span>{" "}
           <span
             className="white-out"
             onClick={() => {
